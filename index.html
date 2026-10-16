@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Five Nights at Maks — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <header>
+      <h1>Five Nights at Maks (Demo)</h1>
+      <div class="status">
+        <div>Night: <span id="night">1</span></div>
+        <div>Time: <span id="time">60</span>s</div>
+        <div>Power: <span id="power">100</span>%</div>
+      </div>
+    </header>
+
+    <section class="game">
+      <div class="cams">
+        <div id="cam-feed" class="cam-feed">CAM 1</div>
+        <aside class="cam-list">
+          <button class="cam-btn active" data-cam="0">CAM 1</button>
+          <button class="cam-btn" data-cam="1">CAM 2</button>
+          <button class="cam-btn" data-cam="2">CAM 3</button>
+          <button class="cam-btn" data-cam="3">CAM 4</button>
+        </aside>
+      </div>
+
+      <div class="controls">
+        <button id="start">Start Night</button>
+        <button id="toggle-monitor">Toggle Monitor</button>
+        <div class="power-bar">
+          <div id="power-fill"></div>
+        </div>
+      </div>
+
+      <div id="message" class="message hidden"></div>
+    </section>
+
+    <footer>
+      <small>Keyboard: 1-4 switch cams, M toggle monitor.</small>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* styles.css */
+:root{
+  --bg:#0b0b0f;
+  --panel:#111217;
+  --accent:#b33f3f;
+  --green:#4caf50;
+  --muted:#777;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg),#050507);color:#e7e7e7}
+#app{max-width:1000px;margin:24px auto;padding:20px}
+header{display:flex;align-items:center;justify-content:space-between}
+header h1{margin:0;font-size:20px}
+.status{display:flex;gap:12px;font-size:14px;color:var(--muted)}
+.game{margin-top:18px;background:var(--panel);padding:16px;border-radius:8px;display:grid;grid-template-columns:1fr 260px;gap:16px}
+.cams{display:flex;gap:12px}
+.cam-feed{flex:1;background:#000;border-radius:6px;min-height:300px;display:flex;align-items:center;justify-content:center;font-size:18px;border:4px solid #111}
+.cam-list{display:flex;flex-direction:column;gap:8px}
+.cam-btn{background:#16161b;border:1px solid #222;color:#ddd;padding:8px;border-radius:6px;cursor:pointer}
+.cam-btn.active{outline:2px solid var(--accent)}
+.controls{display:flex;flex-direction:column;gap:12px}
+.controls button{padding:10px;border-radius:6px;border:none;background:var(--accent);color:white;cursor:pointer}
+.power-bar{width:100%;height:14px;background:#222;border-radius:8px;overflow:hidden}
+#power-fill{height:100%;background:linear-gradient(90deg,var(--green),#ffb74d);width:100%}
+.message{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:18px 24px;background:rgba(0,0,0,0.8);border-radius:8px;font-size:20px}
+.hidden{display:none}
+footer{margin-top:12px;color:var(--muted)}
+@media(max-width:900px){.game{grid-template-columns:1fr}}
